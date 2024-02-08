@@ -7,10 +7,7 @@ const Footer = () => {
 
   return (
     <Box>
-      <BottomNavigation
-        showLabels
-        style={{backgroundColor: '#8FA7BB'}}
-      >
+      <BottomNavigation showLabels style={{ backgroundColor: '#8FA7BB', margin: 0 }}>
         <BottomNavigationAction
           href='https://jon-love-portfolio.fly.dev'
           label='My Portfolio'
