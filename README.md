@@ -1,6 +1,6 @@
 github: backend: https://github.com/jonnny013/exercise2BE frontend: https://github.com/jonnny013/exercise2FE
 
-website:
+website: https://jon-love-email-service.fly.dev/
 
 This is a simple system to send an email through the backend, the email is also saved to mongoDB.
 
