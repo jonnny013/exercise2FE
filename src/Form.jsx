@@ -52,11 +52,11 @@ const Form = () => {
       <Box
         component='form'
         sx={{
-          '& .MuiTextField-root': { m: 1, width: '55ch' },
+          '& .MuiTextField-root': { m: 1 },
         }}
         noValidate
         autoComplete='off'
-        style={{ display: 'flex', flexDirection: 'column' }}
+        style={{ display: 'flex', flexDirection: 'column', width: '80%', maxWidth: '500px' }}
       >
         {error.length > 1 && <Alert severity='info'>{error}</Alert>}
         <TextField
