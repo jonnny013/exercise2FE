@@ -20,13 +20,13 @@ const Form = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault()
-    const emailTosend = {
+    const emailToSend = {
       email,
       subject,
       body
     }
     try {
-       await axios.post('/api/email', emailTosend)
+       await axios.post('/api/email', emailToSend)
        setEmail('')
        setBody('')
        setSubject('')
@@ -34,7 +34,7 @@ const Form = () => {
     } catch (err) {
       console.log(err)
       setError(err.response.data)
-    }
+    } 
   }
 
 
@@ -64,12 +64,14 @@ const Form = () => {
           label='Email to:'
           placeholder='email@email.com'
           onChange={event => setEmail(event.target.value)}
+          value={email}
         />
         <TextField
           id='outlined-textarea'
           label='Subject'
           placeholder='Welcome to the team...'
           onChange={event => setSubject(event.target.value)}
+          value={subject}
         />
         <TextField
           id='outlined-multiline-static'
@@ -77,6 +79,7 @@ const Form = () => {
           placeholder='Some lovely message here...'
           multiline
           rows={4}
+          value={body}
           onChange={event => setBody(event.target.value)}
         />
         <Button
